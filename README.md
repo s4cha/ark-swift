@@ -72,3 +72,28 @@ account.fetchDelegateFee().then { fee in
 
 //output: 2500000000
 ```
+
+#### Delegates
+Get the delegates of an account.
+
+```swift
+account.fetchDelegates().then { delegates in
+    print(delegates)
+}
+
+//output: []
+
+[
+  Delegate(
+    username: "dr10",
+    address: "ANwjGUcVbLXpqbBUWbjUBQWkr4MWVDuJu9",
+    publicKey: "031641ff081b93279b669f7771b3fbe48ade13eadb6d5fd85bdd025655e349f008",
+    vote: "146519050420810",
+    producedBlocks: 35990,
+    missedBlocks: 215,
+    rate: 13,
+    approval: 1.12,
+    productivity: 99.4100037
+  )
+]
+```

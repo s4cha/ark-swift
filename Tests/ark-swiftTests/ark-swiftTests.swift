@@ -18,7 +18,7 @@ class ArkswiftTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Inject Fake local Api
-        api = MockApi()
+//        api = MockApi()
         account = Account(address: "A_VALID_ADDRESS")
     }
     
@@ -71,6 +71,31 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
+    func testCanRetreiveAccountDelegates() {
+        let exp = expectation(description: "Can retrieve account public key")
+        account.fetchDelegates().then { delegates in
+            XCTAssertEqual(delegates.count, 2)
+//            let d = delegates[1]
+//            XCTAssertEqual(d.username, "d2")
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
+    func testREALCanRetreiveAccountDelegates() {
+        let exp = expectation(description: "Can retrieve account public key")
+        let a = Account(address: "AZreeHxX23s4jttL3ML8n6A2aLrwHPfVGZ")
+        a.fetchDelegates().then { delegates in
+            print(delegates)
+            XCTAssertEqual(delegates.count, 2)
+            let d = delegates[1]
+            XCTAssertEqual(d.username, "d2")
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 3)
+    }
+    
+    
 }
 
 class MockApi: Api {
@@ -97,5 +122,13 @@ class MockApi: Api {
     
     func fetchAccountDelegateFee() -> Promise<Int> {
         return Promise.resolve(6789)
+    }
+    
+    func fetchAccountDelegates(for account: Account) -> Promise<[Delegate]> {
+        var d1 = Delegate()
+        d1.username = "d1"
+        var d2 = Delegate()
+        d2.username = "d2"
+        return Promise.resolve([d1, d2])
     }
 }

@@ -14,4 +14,5 @@ protocol Api {
     func fetchPublicKey(for account: Account) -> Promise<String>
     func fetchAccountInfo(for account: Account) -> Promise<Account>
     func fetchAccountDelegateFee() -> Promise<Int>
+    func fetchAccountDelegates(for account: Account) -> Promise<[Delegate]>
 }

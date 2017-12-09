@@ -36,4 +36,10 @@ struct NetworkApi: Api {
     func fetchAccountDelegateFee() -> Promise<Int> {
         return network.get("/accounts/delegates/fee", keypath: "fee")
     }
+    
+    func fetchAccountDelegates(for account: Account) -> Promise<[Delegate]> {
+        return network.get("/accounts/delegates",
+                           params: ["address" : account.address],
+                           keypath: "delegates")
+    }
 }
