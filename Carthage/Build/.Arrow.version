@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "ff2f6733aa81dcbc8514d9429529a15042c72ac01654ee8ef3550c8ef420784b",
+      "name" : "Arrow"
+    }
+  ],
+  "commitish" : "3.0.5",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}
