@@ -9,12 +9,60 @@
 [![GitHub tag](https://img.shields.io/github/release/s4cha/ark-swift.svg)]()
 <!-- [![CocoaPods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/pods/PUT_NAME_HERE) -->
 
+
+Import `Ark` framework at the top of your file:
 ```swift
 import Ark
 ```
 
-### Balance
-```swift
-let myAccout = Account(address:"MY_ADDRESS")
+### Account
 
+```swift
+let account = Account(address: "MY_ADDRESS")
+```
+
+#### Get balance
+
+Get the balance of an account.
+```swift
+account.fetchBalance().then { balance in
+    print(balance)
+}
+
+//output: Balance(confirmed: 42, unconfirmed: 200)
+```
+
+#### Get account public key
+Get the public key of an account.
+
+```swift
+account.fetchPublicKey().then { publicKey in
+    print(publicKey)
+}
+
+//output: 4fh34jhd34kjdk234jdk5252fkjl4jfaldk324al23r25446
+```
+
+
+
+
+
+
+#### Get account information
+Get the account information of an address.
+
+```swift
+account.fetchInfo().then { account in
+    print(account)
+}
+
+//output:
+Account(
+  address: "anAccountAddress",
+  balance: Optional(Balance(confirmed: 123, unconfirmed: 456)),
+  publicKey: Optional("aPublicKey"),
+  secondPublicKey: Optional("aSecondPublicKey"),
+  secondSignature: Optional(true),
+  unconfirmedSignature: Optional(false)
+)
 ```

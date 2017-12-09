@@ -10,7 +10,7 @@ import Foundation
 import then
 
 protocol Api {
-    func fetchAccountBalance(for account: Account) -> Promise<Int>
+    func fetchAccountBalance(for account: Account) -> Promise<Balance>
     func fetchPublicKey(for account: Account) -> Promise<String>
     func fetchAccountInfo(for account: Account) -> Promise<Account>
 }

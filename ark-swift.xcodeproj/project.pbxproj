@@ -36,6 +36,16 @@
 		995463261FDBC31E0081BF99 /* ark-swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* ark-swift.swift */; };
 		995463281FDBC4DD0081BF99 /* Arrow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9954630B1FDBC0510081BF99 /* Arrow.framework */; };
 		995463291FDBC5070081BF99 /* ws.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9954630D1FDBC0520081BF99 /* ws.framework */; };
+		9954632B1FDBCB6B0081BF99 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954632A1FDBCB6B0081BF99 /* Balance.swift */; };
+		9954632C1FDBCBCE0081BF99 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954632A1FDBCB6B0081BF99 /* Balance.swift */; };
+		9954632D1FDBCBCF0081BF99 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954632A1FDBCB6B0081BF99 /* Balance.swift */; };
+		9954632E1FDBCBCF0081BF99 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954632A1FDBCB6B0081BF99 /* Balance.swift */; };
+		9954632F1FDBCBD50081BF99 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954632A1FDBCB6B0081BF99 /* Balance.swift */; };
+		995463311FDBCC0C0081BF99 /* Balance+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995463301FDBCC0C0081BF99 /* Balance+JSON.swift */; };
+		995463321FDBCC3F0081BF99 /* Balance+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995463301FDBCC0C0081BF99 /* Balance+JSON.swift */; };
+		995463331FDBCC3F0081BF99 /* Balance+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995463301FDBCC0C0081BF99 /* Balance+JSON.swift */; };
+		995463341FDBCC400081BF99 /* Balance+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995463301FDBCC0C0081BF99 /* Balance+JSON.swift */; };
+		995463351FDBCC400081BF99 /* Balance+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995463301FDBCC0C0081BF99 /* Balance+JSON.swift */; };
 		996237131FDBBEB0007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
 		996237141FDBBEB7007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
 		996237151FDBBEB7007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
@@ -90,6 +100,8 @@
 		9954630D1FDBC0520081BF99 /* ws.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ws.framework; path = Carthage/Build/iOS/ws.framework; sourceTree = "<group>"; };
 		995463141FDBC0C70081BF99 /* Account+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+Api.swift"; sourceTree = "<group>"; };
 		9954631A1FDBC0EF0081BF99 /* Account+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+JSON.swift"; sourceTree = "<group>"; };
+		9954632A1FDBCB6B0081BF99 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		995463301FDBCC0C0081BF99 /* Balance+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Balance+JSON.swift"; sourceTree = "<group>"; };
 		996237121FDBBEB0007ED2D5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		996237171FDBBEE4007ED2D5 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		9962371E1FDBBF30007ED2D5 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
@@ -201,6 +213,7 @@
 			children = (
 				8933C7841EB5B820000D00A4 /* ark-swift.swift */,
 				996237171FDBBEE4007ED2D5 /* Account.swift */,
+				9954632A1FDBCB6B0081BF99 /* Balance.swift */,
 				995463131FDBC0B30081BF99 /* Models+Api */,
 				9962371D1FDBBF0C007ED2D5 /* Api Implementation */,
 				996237111FDBBEA7007ED2D5 /* Api */,
@@ -240,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				9954631A1FDBC0EF0081BF99 /* Account+JSON.swift */,
+				995463301FDBCC0C0081BF99 /* Balance+JSON.swift */,
 			);
 			path = "JSON Mapping";
 			sourceTree = "<group>";
@@ -595,11 +609,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995463311FDBCC0C0081BF99 /* Balance+JSON.swift in Sources */,
 				996237131FDBBEB0007ED2D5 /* Api.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* ark-swift.swift in Sources */,
 				996237181FDBBEE4007ED2D5 /* Account.swift in Sources */,
 				9962371F1FDBBF30007ED2D5 /* NetworkApi.swift in Sources */,
 				995463151FDBC0C70081BF99 /* Account+Api.swift in Sources */,
+				9954632B1FDBCB6B0081BF99 /* Balance.swift in Sources */,
 				9954631B1FDBC0EF0081BF99 /* Account+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +630,9 @@
 				8933C7901EB5B82D000D00A4 /* ark-swiftTests.swift in Sources */,
 				995463231FDBC2F30081BF99 /* Account+Api.swift in Sources */,
 				995463221FDBC2930081BF99 /* Account.swift in Sources */,
+				9954632F1FDBCBD50081BF99 /* Balance.swift in Sources */,
 				995463251FDBC2FA0081BF99 /* Account+JSON.swift in Sources */,
+				995463351FDBCC400081BF99 /* Balance+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,11 +640,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995463331FDBCC3F0081BF99 /* Balance+JSON.swift in Sources */,
 				996237151FDBBEB7007ED2D5 /* Api.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* ark-swift.swift in Sources */,
 				9962371A1FDBBEE8007ED2D5 /* Account.swift in Sources */,
 				996237211FDBBF39007ED2D5 /* NetworkApi.swift in Sources */,
 				995463171FDBC0CA0081BF99 /* Account+Api.swift in Sources */,
+				9954632D1FDBCBCF0081BF99 /* Balance.swift in Sources */,
 				9954631D1FDBC0F20081BF99 /* Account+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,11 +655,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995463341FDBCC400081BF99 /* Balance+JSON.swift in Sources */,
 				996237161FDBBEB8007ED2D5 /* Api.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* ark-swift.swift in Sources */,
 				9962371B1FDBBEE9007ED2D5 /* Account.swift in Sources */,
 				996237221FDBBF3A007ED2D5 /* NetworkApi.swift in Sources */,
 				995463181FDBC0CA0081BF99 /* Account+Api.swift in Sources */,
+				9954632E1FDBCBCF0081BF99 /* Balance.swift in Sources */,
 				9954631E1FDBC0F20081BF99 /* Account+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,11 +670,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995463321FDBCC3F0081BF99 /* Balance+JSON.swift in Sources */,
 				996237141FDBBEB7007ED2D5 /* Api.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* ark-swift.swift in Sources */,
 				996237191FDBBEE8007ED2D5 /* Account.swift in Sources */,
 				996237201FDBBF39007ED2D5 /* NetworkApi.swift in Sources */,
 				995463161FDBC0C90081BF99 /* Account+Api.swift in Sources */,
+				9954632C1FDBCBCE0081BF99 /* Balance.swift in Sources */,
 				9954631C1FDBC0F10081BF99 /* Account+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

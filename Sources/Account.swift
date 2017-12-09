@@ -10,12 +10,23 @@ import Foundation
 
 struct Account {
     
+    /// Address of account.
     var address: String
     
-    /// This is the money on the account.
-    var balance = 0
+    /// Balance of account.
+    var balance: Balance?
+    
+    /// Public key of account.
     var publicKey: String?
+    
+    // Second signature public key.
     var secondPublicKey: String?
+    
+    /// If account enabled second signature.
+    var secondSignature: Bool?
+    
+    /// If account enabled second signature, but it's still not confirmed.
+    var unconfirmedSignature: Bool?
     
     init() {
         self.address = "unknown"

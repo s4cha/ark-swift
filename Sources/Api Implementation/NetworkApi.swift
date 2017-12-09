@@ -16,10 +16,9 @@ struct NetworkApi: Api {
     
     let network = WS("https://api.arknode.net")
     
-    func fetchAccountBalance(for account: Account) -> Promise<Int> {
+    func fetchAccountBalance(for account: Account) -> Promise<Balance> {
         return network.get("/api/accounts/getBalance",
-                           params: ["address" : account.address],
-                           keypath: "balance")
+                           params: ["address" : account.address])
     }
     
     func fetchPublicKey(for account: Account) -> Promise<String> {
@@ -29,6 +28,8 @@ struct NetworkApi: Api {
     }
     
     func fetchAccountInfo(for account: Account) -> Promise<Account> {
-        return network.get("/api/accounts", params: ["address" : account.address])
+        return network.get("/api/accounts",
+                           params: ["address" : account.address],
+                           keypath: "account")
     }
 }

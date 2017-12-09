@@ -12,13 +12,15 @@ import Arrow
 extension Account: ArrowParsable {
     
     mutating func deserialize(_ json: JSON) {
-        print(json)
-        guard let account = json["account"] else {
-            return
-        }
-        address <-- account["address"]
-        balance <-- account["balance"]
-        publicKey <-- account["publicKey"]
-        secondPublicKey <-- account["secondPublicKey"]
+        address <-- json["address"]
+        balance = Balance()
+        balance?.confirmed <-- json["balance"]
+        balance?.unconfirmed <-- json["unconfirmedBalance"]
+        publicKey <-- json["publicKey"]
+        secondPublicKey <-- json["secondPublicKey"]
+        unconfirmedSignature <-- json["unconfirmedSignature"]
+        secondSignature <-- json["secondSignature"]
     }
 }
+
+

@@ -11,10 +11,12 @@ import then
 
 extension Account {
     
-    func fetchBalance() -> Promise<Int> {
+    /// Get the balance of the account.
+    func fetchBalance() -> Promise<Balance> {
         return api.fetchAccountBalance(for: self)
     }
     
+    /// Get the public key
     func fetchPublicKey() -> Promise<String> {
         return api.fetchPublicKey(for: self)
     }
