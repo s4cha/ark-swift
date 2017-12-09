@@ -18,7 +18,7 @@ class ArkswiftTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Inject Fake local Api
-//        api = MockApi()
+        api = MockApi()
         account = Account(address: "A_VALID_ADDRESS")
     }
     
@@ -75,27 +75,12 @@ class ArkswiftTests: XCTestCase {
         let exp = expectation(description: "Can retrieve account public key")
         account.fetchDelegates().then { delegates in
             XCTAssertEqual(delegates.count, 2)
-//            let d = delegates[1]
-//            XCTAssertEqual(d.username, "d2")
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 0.1)
-    }
-    
-    func testREALCanRetreiveAccountDelegates() {
-        let exp = expectation(description: "Can retrieve account public key")
-        let a = Account(address: "AZreeHxX23s4jttL3ML8n6A2aLrwHPfVGZ")
-        a.fetchDelegates().then { delegates in
-            print(delegates)
-            XCTAssertEqual(delegates.count, 2)
             let d = delegates[1]
             XCTAssertEqual(d.username, "d2")
             exp.fulfill()
         }
-        wait(for: [exp], timeout: 3)
+        wait(for: [exp], timeout: 0.1)
     }
-    
-    
 }
 
 class MockApi: Api {
