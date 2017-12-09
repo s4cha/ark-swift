@@ -12,6 +12,11 @@ import then
 /// These are shortucts to call api actions through the Account Model for simplicity's sake.
 extension Account {
     
+    /// Get a list of top accounts.
+    static func fetchTopAccounts() -> Promise<[Account]> {
+        return api.fetchTopAccounts()
+    }
+    
     /// Get the balance of an account.
     func fetchBalance() -> Promise<Balance> {
         return api.fetchAccountBalance(for: self)

@@ -97,6 +97,16 @@ account.fetchDelegates().then { delegates in
 ]
 ```
 
+#### Top Accounts
+Get a list of top accounts.
+```swift
+Account.fetchTopAccounts().then { topAccounts in
+  print(topAccounts)
+}
+
+//output: [Account1, Account2, Account3 etc ...]
+```
+
 ### Blockchain
 
 #### Supply
@@ -105,7 +115,6 @@ Get the blockchain supply.
 ```swift
 Block.fetchSupply().then { supply in
     print(supply)
-
 }
 
 //output: 13060596600000000

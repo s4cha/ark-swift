@@ -12,6 +12,7 @@ import then
 protocol Api {
     
     // Account
+    func fetchTopAccounts() -> Promise<[Account]>
     func fetchAccountBalance(for account: Account) -> Promise<Balance>
     func fetchPublicKey(for account: Account) -> Promise<String>
     func fetchAccountInfo(for account: Account) -> Promise<Account>

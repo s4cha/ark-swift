@@ -90,17 +90,32 @@ class ArkswiftTests: XCTestCase {
         }
         wait(for: [exp], timeout: 0.1)
     }
+    
+    func testCanfetchTopAccounts() {
+        let exp = expectation(description: "Can fecth top Accounts")
+        Account.fetchTopAccounts().then { topAccounts in
+            XCTAssertEqual(topAccounts.count, 2)
+            let a = topAccounts[1]
+            XCTAssertEqual(a.address, "2")
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
 }
 
 class MockApi: Api {
+    
+    func fetchTopAccounts() -> Promise<[Account]> {
+        return Promise([Account(address:"1"), Account(address:"2")])
+    }
 
     func fetchAccountBalance(for account: Account) -> Promise<Balance> {
         let fakeBalance = Balance(confirmed: 42, unconfirmed: 200)
-        return Promise.resolve(fakeBalance)
+        return Promise(fakeBalance)
     }
     
     func fetchPublicKey(for account: Account) -> Promise<String> {
-        return Promise.resolve("AValidPublicKey")
+        return Promise("AValidPublicKey")
     }
     
     func fetchAccountInfo(for account: Account) -> Promise<Account> {
@@ -111,11 +126,11 @@ class MockApi: Api {
         fakeAccount.secondPublicKey = "aSecondPublicKey"
         fakeAccount.secondSignature = true
         fakeAccount.unconfirmedSignature = false
-        return Promise.resolve(fakeAccount)
+        return Promise(fakeAccount)
     }
     
     func fetchAccountDelegateFee() -> Promise<Int> {
-        return Promise.resolve(6789)
+        return Promise(6789)
     }
     
     func fetchAccountDelegates(for account: Account) -> Promise<[Delegate]> {
@@ -123,10 +138,10 @@ class MockApi: Api {
         d1.username = "d1"
         var d2 = Delegate()
         d2.username = "d2"
-        return Promise.resolve([d1, d2])
+        return Promise([d1, d2])
     }
     
     func fetchSuppy() -> Promise<Int> {
-        return Promise.resolve(123456789)
+        return Promise(123456789)
     }
 }
