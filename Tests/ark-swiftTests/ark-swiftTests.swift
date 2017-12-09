@@ -50,7 +50,6 @@ class ArkswiftTests: XCTestCase {
     func testCanRetreiveAccountInformation() {
         let exp = expectation(description: "Can retrieve account Information")
         account.fetchInfo().then { account in
-            print(account)
             XCTAssertEqual(account.address, "anAccountAddress")
             XCTAssertEqual(account.balance?.confirmed, 123)
             XCTAssertEqual(account.balance?.unconfirmed, 456)
@@ -63,12 +62,15 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
-//    "unconfirmedBalance": "Unconfirmed balance of account. Integer",
-//    "balance": "Balance of account. Integer",
-//    "publicKey": "Public key of account. Hex",
-//    "unconfirmedSignature": "If account enabled second signature, but it's still not confirmed. Boolean: true or false",
-//    "secondSignature": "If account enabled second signature. Boolean: true or false",
-//    "secondPublicKey": "Second signature public key. Hex"
+    func testCanRetreiveAccountDelegateFee() {
+        let exp = expectation(description: "Can retrieve account public key")
+        account.fetchDelegateFee().then { fee in
+            XCTAssertEqual(fee, 6789)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
 }
 
 class MockApi: Api {
@@ -91,5 +93,9 @@ class MockApi: Api {
         fakeAccount.secondSignature = true
         fakeAccount.unconfirmedSignature = false
         return Promise.resolve(fakeAccount)
+    }
+    
+    func fetchAccountDelegateFee() -> Promise<Int> {
+        return Promise.resolve(6789)
     }
 }

@@ -24,4 +24,8 @@ extension Account {
     func fetchInfo() -> Promise<Account> {
         return api.fetchAccountInfo(for: self)
     }
+    
+    func fetchDelegateFee() -> Promise<Int> {
+        return api.fetchAccountDelegateFee()
+    }
 }

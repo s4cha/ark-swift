@@ -21,7 +21,7 @@ import Ark
 let account = Account(address: "MY_ADDRESS")
 ```
 
-#### Get balance
+#### Balance
 
 Get the balance of an account.
 ```swift
@@ -32,7 +32,7 @@ account.fetchBalance().then { balance in
 //output: Balance(confirmed: 42, unconfirmed: 200)
 ```
 
-#### Get account public key
+#### Public key
 Get the public key of an account.
 
 ```swift
@@ -43,12 +43,7 @@ account.fetchPublicKey().then { publicKey in
 //output: 4fh34jhd34kjdk234jdk5252fkjl4jfaldk324al23r25446
 ```
 
-
-
-
-
-
-#### Get account information
+#### Information
 Get the account information of an address.
 
 ```swift
@@ -65,4 +60,15 @@ Account(
   secondSignature: Optional(true),
   unconfirmedSignature: Optional(false)
 )
+```
+
+#### Delegate fee
+Get the delegate fee of an account.
+
+```swift
+account.fetchDelegateFee().then { fee in
+    print(fee)
+}
+
+//output: 2500000000
 ```

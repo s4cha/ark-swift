@@ -11,25 +11,29 @@ import ws
 import then
 
 struct NetworkApi: Api {
-    
+
     static let instance = NetworkApi()
     
-    let network = WS("https://api.arknode.net")
+    let network = WS("https://api.arknode.net/api")
     
     func fetchAccountBalance(for account: Account) -> Promise<Balance> {
-        return network.get("/api/accounts/getBalance",
+        return network.get("/accounts/getBalance",
                            params: ["address" : account.address])
     }
     
     func fetchPublicKey(for account: Account) -> Promise<String> {
-        return network.get("/api/accounts/getPublickey",
+        return network.get("/accounts/getPublickey",
                            params: ["address" : account.address],
                            keypath: "publicKey")
     }
     
     func fetchAccountInfo(for account: Account) -> Promise<Account> {
-        return network.get("/api/accounts",
+        return network.get("/accounts",
                            params: ["address" : account.address],
                            keypath: "account")
+    }
+    
+    func fetchAccountDelegateFee() -> Promise<Int> {
+        return network.get("/accounts/delegates/fee", keypath: "fee")
     }
 }
