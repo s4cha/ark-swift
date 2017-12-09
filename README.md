@@ -81,8 +81,7 @@ account.fetchDelegates().then { delegates in
     print(delegates)
 }
 
-//output: []
-
+//output:
 [
   Delegate(
     username: "dr10",
@@ -96,4 +95,18 @@ account.fetchDelegates().then { delegates in
     productivity: 99.4100037
   )
 ]
+```
+
+### Blockchain
+
+#### Supply
+Get the blockchain supply.
+
+```swift
+Block.fetchSupply().then { supply in
+    print(supply)
+
+}
+
+//output: 13060596600000000
 ```

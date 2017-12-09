@@ -42,4 +42,8 @@ struct NetworkApi: Api {
                            params: ["address" : account.address],
                            keypath: "delegates")
     }
+    
+    func fetchSuppy() -> Promise<Int> {
+        return network.get("/blocks/getSupply", keypath: "supply")
+    }
 }

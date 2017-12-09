@@ -81,10 +81,19 @@ class ArkswiftTests: XCTestCase {
         }
         wait(for: [exp], timeout: 0.1)
     }
+    
+    func testCanRetreiveSupply() {
+        let exp = expectation(description: "Can retrieve supply")
+        Block.fetchSupply().then { supply in
+            XCTAssertEqual(supply, 123456789)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
 }
 
 class MockApi: Api {
-    
+
     func fetchAccountBalance(for account: Account) -> Promise<Balance> {
         let fakeBalance = Balance(confirmed: 42, unconfirmed: 200)
         return Promise.resolve(fakeBalance)
@@ -115,5 +124,9 @@ class MockApi: Api {
         var d2 = Delegate()
         d2.username = "d2"
         return Promise.resolve([d1, d2])
+    }
+    
+    func fetchSuppy() -> Promise<Int> {
+        return Promise.resolve(123456789)
     }
 }
