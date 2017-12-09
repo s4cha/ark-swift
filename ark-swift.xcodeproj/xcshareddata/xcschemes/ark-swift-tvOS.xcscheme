@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
-               BuildableName = "ark-swift.framework"
+               BuildableName = "Ark.framework"
                BlueprintName = "ark-swift-tvOS"
                ReferencedContainer = "container:ark-swift.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
-            BuildableName = "ark-swift.framework"
+            BuildableName = "Ark.framework"
             BlueprintName = "ark-swift-tvOS"
             ReferencedContainer = "container:ark-swift.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
-            BuildableName = "ark-swift.framework"
+            BuildableName = "Ark.framework"
             BlueprintName = "ark-swift-tvOS"
             ReferencedContainer = "container:ark-swift.xcodeproj">
          </BuildableReference>
@@ -86,7 +86,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
-            BuildableName = "ark-swift.framework"
+            BuildableName = "Ark.framework"
             BlueprintName = "ark-swift-tvOS"
             ReferencedContainer = "container:ark-swift.xcodeproj">
          </BuildableReference>

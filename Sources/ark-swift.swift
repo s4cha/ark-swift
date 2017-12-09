@@ -7,3 +7,5 @@
 //
 
 import Foundation
+
+var api: Api = NetworkApi()

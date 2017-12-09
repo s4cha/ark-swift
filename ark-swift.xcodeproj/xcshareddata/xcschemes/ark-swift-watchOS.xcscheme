@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
-               BuildableName = "ark-swift.framework"
+               BuildableName = "Ark.framework"
                BlueprintName = "ark-swift-watchOS"
                ReferencedContainer = "container:ark-swift.xcodeproj">
             </BuildableReference>
@@ -49,7 +49,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
-            BuildableName = "ark-swift.framework"
+            BuildableName = "Ark.framework"
             BlueprintName = "ark-swift-watchOS"
             ReferencedContainer = "container:ark-swift.xcodeproj">
          </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
-            BuildableName = "ark-swift.framework"
+            BuildableName = "Ark.framework"
             BlueprintName = "ark-swift-watchOS"
             ReferencedContainer = "container:ark-swift.xcodeproj">
          </BuildableReference>

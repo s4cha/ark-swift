@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "4.5.1"
+github "freshOS/Arrow" "3.0.5"
+github "freshOS/then" "3.0.0"
+github "freshOS/ws" "3.0.0"
