@@ -8,9 +8,9 @@
 
 import Foundation
 import XCTest
-import ark-swift
+import Ark
 
-class ark-swiftTests: XCTestCase {
+class ArkswiftTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
