@@ -14,7 +14,11 @@ struct NetworkApi: Api {
 
     static let instance = NetworkApi()
     
-    let network = WS("https://api.arknode.net/api")
+    let network: WS = {
+        let ws = WS("https://api.arknode.net/api")
+        ws.logLevels = .debug
+        return ws
+    }()
     
     func fetchTopAccounts() -> Promise<[Account]> {
         return network.get("/accounts/top", keypath: "accounts")

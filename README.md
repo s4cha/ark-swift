@@ -9,6 +9,15 @@
 [![GitHub tag](https://img.shields.io/github/release/s4cha/ark-swift.svg)]()
 <!-- [![CocoaPods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/pods/PUT_NAME_HERE) -->
 
+```swift
+let account = Account(address:"AK3wUpsmyFrWvgytFRoaHatEKj3uxUBZE6")
+account.fetchBalance().then { [weak self] balance in
+    self?.balanceLabel.text = "\(balance.confirmed.toStandard()) Ark"
+}
+```
+*Displaying an account's balance*
+
+
 
 Import `Ark` framework at the top of your file:
 ```swift
