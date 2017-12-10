@@ -66,6 +66,7 @@
 		99594D411FDBF60C00A8A7A1 /* Block+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D3E1FDBF60C00A8A7A1 /* Block+Api.swift */; };
 		99594D421FDBF60C00A8A7A1 /* Block+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D3E1FDBF60C00A8A7A1 /* Block+Api.swift */; };
 		99594D431FDBF60C00A8A7A1 /* Block+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D3E1FDBF60C00A8A7A1 /* Block+Api.swift */; };
+		99594D451FDD2FAF00A8A7A1 /* MockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D441FDD2FAF00A8A7A1 /* MockApi.swift */; };
 		996237131FDBBEB0007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
 		996237141FDBBEB7007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
 		996237151FDBBEB7007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
@@ -126,6 +127,7 @@
 		9954633C1FDBE6440081BF99 /* Delegate+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Delegate+JSON.swift"; sourceTree = "<group>"; };
 		99594D381FDBF53E00A8A7A1 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		99594D3E1FDBF60C00A8A7A1 /* Block+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Block+Api.swift"; sourceTree = "<group>"; };
+		99594D441FDD2FAF00A8A7A1 /* MockApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApi.swift; sourceTree = "<group>"; };
 		996237121FDBBEB0007ED2D5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		996237171FDBBEE4007ED2D5 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		9962371E1FDBBF30007ED2D5 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				8933C7891EB5B82A000D00A4 /* ark-swiftTests.swift */,
+				99594D441FDD2FAF00A8A7A1 /* MockApi.swift */,
 			);
 			name = Tests;
 			path = "Tests/ark-swiftTests";
@@ -658,6 +661,7 @@
 			files = (
 				995463261FDBC31E0081BF99 /* ark-swift.swift in Sources */,
 				995463241FDBC2F60081BF99 /* NetworkApi.swift in Sources */,
+				99594D451FDD2FAF00A8A7A1 /* MockApi.swift in Sources */,
 				99594D431FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
 				995463201FDBC24E0081BF99 /* Api.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* ark-swiftTests.swift in Sources */,

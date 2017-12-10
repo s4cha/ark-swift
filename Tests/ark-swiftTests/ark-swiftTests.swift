@@ -27,7 +27,7 @@ class ArkswiftTests: XCTestCase {
         super.tearDown()
     }
     
-    func testCanRetreiveAccountBalance() {
+    func testCanRetrieveAccountBalance() {
         let account = Account(address: "A_VALID_ADDRESS")
         let exp = expectation(description: "Can retrieve account balance")
         account.fetchBalance().then { balance in
@@ -38,7 +38,7 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
-    func testCanRetreiveAccountPublicKey() {
+    func testCanRetrieveAccountPublicKey() {
         let exp = expectation(description: "Can retrieve account public key")
         account.fetchPublicKey().then { publicKey in
             XCTAssertEqual(publicKey, "AValidPublicKey")
@@ -47,7 +47,7 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
-    func testCanRetreiveAccountInformation() {
+    func testCanRetrieveAccountInformation() {
         let exp = expectation(description: "Can retrieve account Information")
         account.fetchInfo().then { account in
             XCTAssertEqual(account.address, "anAccountAddress")
@@ -62,7 +62,7 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
-    func testCanRetreiveAccountDelegateFee() {
+    func testCanRetrieveAccountDelegateFee() {
         let exp = expectation(description: "Can retrieve account public key")
         account.fetchDelegateFee().then { fee in
             XCTAssertEqual(fee, 6789)
@@ -71,7 +71,7 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
-    func testCanRetreiveAccountDelegates() {
+    func testCanRetrieveAccountDelegates() {
         let exp = expectation(description: "Can retrieve account public key")
         account.fetchDelegates().then { delegates in
             XCTAssertEqual(delegates.count, 2)
@@ -82,10 +82,19 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
-    func testCanRetreiveSupply() {
+    func testCanRetrieveSupply() {
         let exp = expectation(description: "Can retrieve supply")
         Block.fetchSupply().then { supply in
             XCTAssertEqual(supply, 123456789)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
+    func testCanRetrieveReward() {
+        let exp = expectation(description: "Can retrieve reward")
+        Block.fetchReward().then { reward in
+            XCTAssertEqual(reward, 589)
             exp.fulfill()
         }
         wait(for: [exp], timeout: 0.1)
@@ -103,45 +112,3 @@ class ArkswiftTests: XCTestCase {
     }
 }
 
-class MockApi: Api {
-    
-    func fetchTopAccounts() -> Promise<[Account]> {
-        return Promise([Account(address:"1"), Account(address:"2")])
-    }
-
-    func fetchAccountBalance(for account: Account) -> Promise<Balance> {
-        let fakeBalance = Balance(confirmed: 42, unconfirmed: 200)
-        return Promise(fakeBalance)
-    }
-    
-    func fetchPublicKey(for account: Account) -> Promise<String> {
-        return Promise("AValidPublicKey")
-    }
-    
-    func fetchAccountInfo(for account: Account) -> Promise<Account> {
-        var fakeAccount = Account()
-        fakeAccount.address = "anAccountAddress"
-        fakeAccount.balance = Balance(confirmed: 123, unconfirmed: 456)
-        fakeAccount.publicKey = "aPublicKey"
-        fakeAccount.secondPublicKey = "aSecondPublicKey"
-        fakeAccount.secondSignature = true
-        fakeAccount.unconfirmedSignature = false
-        return Promise(fakeAccount)
-    }
-    
-    func fetchAccountDelegateFee() -> Promise<Int> {
-        return Promise(6789)
-    }
-    
-    func fetchAccountDelegates(for account: Account) -> Promise<[Delegate]> {
-        var d1 = Delegate()
-        d1.username = "d1"
-        var d2 = Delegate()
-        d2.username = "d2"
-        return Promise([d1, d2])
-    }
-    
-    func fetchSuppy() -> Promise<Int> {
-        return Promise(123456789)
-    }
-}

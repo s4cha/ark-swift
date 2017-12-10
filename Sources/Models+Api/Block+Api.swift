@@ -15,4 +15,9 @@ extension Block {
     static func fetchSupply() -> Promise<Int> {
         return api.fetchSuppy()
     }
+    
+    /// Get the blockchain reward.
+    static func fetchReward() -> Promise<Int> {
+        return api.fetchReward()
+    }
 }
