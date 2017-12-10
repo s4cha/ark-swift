@@ -72,6 +72,14 @@ struct NetworkApi: Api {
     }
     
     func fetchBlock(with id: String) -> Promise<Block> {
-        return network.get("/blocks/get", params: ["id" : id], keypath: "block")
+        return network.get("/blocks/get", params: ["id": id], keypath: "block")
+    }
+    
+    func fetchSignatureFee() -> Promise<Int> {
+        return network.get("/signatures/fee", keypath: "fee")
+    }
+    
+    func fetchSignatureFee(for address: String) -> Promise<Int> {
+        return network.get("/signatures/fee", params: ["address": address], keypath: "fee")
     }
 }

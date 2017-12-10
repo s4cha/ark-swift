@@ -27,4 +27,8 @@ protocol Api {
     func fetchNethash() -> Promise<String>
     func fetchBlocks() -> Promise<[Block]>
     func fetchBlock(with id: String) -> Promise<Block>
+    
+    // Signature
+    func fetchSignatureFee() -> Promise<Int>
+    func fetchSignatureFee(for address: String) -> Promise<Int>
 }

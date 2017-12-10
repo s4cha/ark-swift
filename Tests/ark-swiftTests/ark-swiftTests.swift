@@ -168,7 +168,6 @@ class ArkswiftTests: XCTestCase {
         let exp = expectation(description: "Can fetch block with id")
         let block = Block(id: "7432845560996079685")
         block.fetch().then { b in
-            print(b)
             XCTAssertEqual(b.id, "7432845560996079685")
             XCTAssertEqual(b.version, 0)
             XCTAssertEqual(b.timestamp, 22825600)
@@ -185,6 +184,24 @@ class ArkswiftTests: XCTestCase {
             XCTAssertEqual(b.blockSignature, "3044022023505abfacb6538a0fd8db639dfb3078a34d601c3625533c92a629cb4dd7131c0220658d94e2834668430ee0be70f201820be7fe87574acf3d525f67c662acc7eb03")
             XCTAssertEqual(b.confirmations, 1)
             XCTAssertEqual(b.totalForged, "200000000")
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
+    func testCanRetrieveSignatureFee() {
+        let exp = expectation(description: "Can retrieve signature fee")
+        Signature.fetchFee().then { fee in
+            XCTAssertEqual(fee, 500000000)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
+    func testCanRetrieveSignatureFeeForAddress() {
+        let exp = expectation(description: "Can retrieve signature fee for address")
+        Signature.fetchFee(for: "AK3wUpsmyFrWvweRoHaEjuxUBE6").then { fee in
+            XCTAssertEqual(fee, 500000000)
             exp.fulfill()
         }
         wait(for: [exp], timeout: 0.1)

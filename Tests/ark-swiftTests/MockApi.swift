@@ -97,4 +97,11 @@ class MockApi: Api {
         return fakeBlock
     }
     
+    func fetchSignatureFee() -> Promise<Int> {
+        return Promise(500000000)
+    }
+    
+    func fetchSignatureFee(for address: String) -> Promise<Int> {
+        return Promise(500000000)
+    }
 }

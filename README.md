@@ -186,3 +186,28 @@ block.fetch().then { block in
 
 //output: Block(id: "7432845560996079685", version: Optional(0), timestamp: Optional(22825600), height: Optional(2816164), previousBlock: Optional("11152274710022062224"), numberOfTransactions: Optional(0), totalAmount: Optional(0), totalFee: Optional(0), reward: Optional(200000000), payloadLength: Optional(0), payloadHash: Optional("e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"), generatorPublicKey: Optional("0217ff1ec656f2354a899bde097bb3131a9730fe491bb87dedb96489120be9154f"), generatorId: Optional("AXzEMF7TC1aH3ax1Luxk6XdyKXDRxnBj4f"), blockSignature: Optional("3044022023505abfacb6538a0fd8db639dfb3078a34d601c3625533c92a629cb4dd7131c0220658d94e2834668430ee0be70f201820be7fe87574acf3d525f67c662acc7eb03"), confirmations: Optional(1), totalForged: Optional("200000000"))
 ```
+
+
+### Signature
+
+#### Fee
+Get the fee for a signature.
+
+```swift
+Signature.fetchFee().then { fee in
+    print(fee)
+}
+
+//output: 500000000
+```
+
+#### Fee for address
+Get the fee for a signature on a specified address.
+
+```swift
+Signature.fetchFee(for: "AK3wUpsmyFrWvweRoHaEjuxUBE6").then { fee in
+    print(fee)
+}
+
+//output: 500000000
+```
