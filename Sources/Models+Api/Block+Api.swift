@@ -9,7 +9,7 @@
 import Foundation
 import then
 
-extension Block {
+public extension Block {
     
     /// Get the blockchain supply.
     static func fetchSupply() -> Promise<Int> {

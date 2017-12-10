@@ -10,7 +10,7 @@ import Foundation
 import then
 
 /// These are shortucts to call api actions through the Account Model for simplicity's sake.
-extension Account {
+public extension Account {
     
     /// Get a list of top accounts.
     static func fetchTopAccounts() -> Promise<[Account]> {

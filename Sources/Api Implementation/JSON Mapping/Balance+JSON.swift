@@ -12,7 +12,7 @@ import Arrow
 
 extension Balance: ArrowParsable {
     
-    mutating func deserialize(_ json: JSON) {
+    mutating public func deserialize(_ json: JSON) {
         confirmed <-- json["balance"]
         unconfirmed <-- json["unconfirmedBalance"]
     }

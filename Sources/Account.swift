@@ -8,31 +8,31 @@
 
 import Foundation
 
-struct Account {
+public struct Account {
     
     /// Address of account.
-    var address: String
+    public var address: String
     
     /// Balance of account.
-    var balance: Balance?
+    public var balance: Balance?
     
     /// Public key of account.
-    var publicKey: String?
+    public var publicKey: String?
     
     // Second signature public key.
-    var secondPublicKey: String?
+    public var secondPublicKey: String?
     
     /// If account enabled second signature.
-    var secondSignature: Bool?
+    public var secondSignature: Bool?
     
     /// If account enabled second signature, but it's still not confirmed.
-    var unconfirmedSignature: Bool?
+    public var unconfirmedSignature: Bool?
     
-    init() {
+    public init() {
         self.address = "unknown"
     }
     
-    init(address: String) {
+    public init(address: String) {
         self.address = address
     }
 }

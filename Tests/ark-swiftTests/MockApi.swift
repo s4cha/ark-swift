@@ -8,6 +8,7 @@
 
 import Foundation
 import then
+@testable import Ark
 
 class MockApi: Api {
     

@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-import Ark
+@testable import Ark
 import then
 
 class ArkswiftTests: XCTestCase {

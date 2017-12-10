@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct Balance {
+public struct Balance {
     
     /// Balance of account.
-    var confirmed: Int
+    public var confirmed: Int
     
     /// Unconfirmed balance of account.
-    var unconfirmed: Int
+    public var unconfirmed: Int
     
-    init() {
+    public init() {
         confirmed = 0
         unconfirmed = 0
     }
     
-    init(confirmed: Int, unconfirmed: Int) {
+    public init(confirmed: Int, unconfirmed: Int) {
         self.confirmed = confirmed
         self.unconfirmed = unconfirmed
     }

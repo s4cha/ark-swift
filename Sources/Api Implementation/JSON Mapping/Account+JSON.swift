@@ -11,7 +11,7 @@ import Arrow
 
 extension Account: ArrowParsable {
     
-    mutating func deserialize(_ json: JSON) {
+    mutating public func deserialize(_ json: JSON) {
         address <-- json["address"]
         balance = Balance()
         balance?.confirmed <-- json["balance"]

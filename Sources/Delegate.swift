@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct Delegate {
-    var username = ""
-    var address = ""
-    var publicKey = ""
-    var vote = ""
-    var producedBlocks = 0
-    var missedBlocks = 0
-    var rate = 0
-    var approval: Float = 0
-    var productivity: Float = 0
+public struct Delegate {
+    public var username = ""
+    public var address = ""
+    public var publicKey = ""
+    public var vote = ""
+    public var producedBlocks = 0
+    public var missedBlocks = 0
+    public var rate = 0
+    public var approval: Float = 0
+    public var productivity: Float = 0
+    
+    public init() {}
 }
-
-
 

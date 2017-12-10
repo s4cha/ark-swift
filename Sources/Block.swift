@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Block {
+public struct Block {
     
 }

@@ -11,7 +11,7 @@ import Arrow
 
 extension Delegate: ArrowParsable {
     
-    mutating func deserialize(_ json: JSON) {
+    mutating public func deserialize(_ json: JSON) {
         username <-- json["username"]
         address <-- json["address"]
         publicKey <-- json["publicKey"]
