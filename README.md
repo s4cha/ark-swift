@@ -4,7 +4,7 @@
 ![Platform: iOS 8+](https://img.shields.io/badge/platform-iOS-blue.svg?style=flat)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://www.bitrise.io/app/9c254d1192dee0b6/status.svg?token=LJCBSpGJX4fHNdB4q1NTrQ)](https://www.bitrise.io/app/9c254d1192dee0b6)
-[![codebeat badge](https://codebeat.co/badges/113d12a8-9bd1-434f-a4a1-5c88e3a4001a)](https://codebeat.co/projects/github-com-s4cha-ark-swift-master)
+[![codebeat badge](https://codebeat.co/badges/82517c1b-d4aa-4e8d-b8dc-fa8d9f6f49ce)](https://codebeat.co/projects/github-com-s4cha-ark-swift-master)
 [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/s4cha/ark-swift/blob/master/LICENSE)
 [![GitHub tag](https://img.shields.io/github/release/s4cha/ark-swift.svg)]()
 <!-- [![CocoaPods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/pods/PUT_NAME_HERE) -->
