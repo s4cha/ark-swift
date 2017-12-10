@@ -25,4 +25,9 @@ public extension Block {
     static func fetchMilestone() -> Promise<Int> {
         return api.fetchMilestone()
     }
+    
+    /// Get the transaction fee for sending "normal" transactions.
+    static func fetchFee() -> Promise<Int> {
+        return api.fetchFee()
+    }
 }

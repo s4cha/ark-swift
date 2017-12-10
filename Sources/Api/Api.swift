@@ -23,4 +23,5 @@ protocol Api {
     func fetchSuppy() -> Promise<Int>
     func fetchReward() -> Promise<Int>
     func fetchMilestone() -> Promise<Int>
+    func fetchFee() -> Promise<Int>
 }

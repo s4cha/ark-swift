@@ -11,7 +11,7 @@ import then
 @testable import Ark
 
 class MockApi: Api {
-    
+
     func fetchTopAccounts() -> Promise<[Account]> {
         return Promise([Account(address:"1"), Account(address:"2")])
     }
@@ -58,5 +58,9 @@ class MockApi: Api {
     
     func fetchMilestone() -> Promise<Int> {
         return Promise(12)
+    }
+    
+    func fetchFee() -> Promise<Int> {
+        return Promise(10000000)
     }
 }

@@ -109,6 +109,15 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
+    func testCanRetrieveFee() {
+        let exp = expectation(description: "Can retrieve fee")
+        Block.fetchFee().then { fee in
+            XCTAssertEqual(fee, 10000000)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
     func testCanfetchTopAccounts() {
         let exp = expectation(description: "Can fecth top Accounts")
         Account.fetchTopAccounts().then { topAccounts in

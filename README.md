@@ -141,3 +141,14 @@ Block.fetchMilestone().then { milestone in
 
 //output: 0
 ```
+
+#### Fee
+Get the transaction fee for sending "normal" transactions.
+
+```swift
+Block.fetchFee().then { fee in
+    print(fee)
+}
+
+//output: 10000000
+```
