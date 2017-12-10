@@ -13,21 +13,59 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var publicKeyLabel: UILabel!
+    @IBOutlet weak var refreshButton: UIButton!
+    
+    let account = Account(address: "AK3wUpsmyFrWvgytFRoaHatEKj3uxUBZE6")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Account"
-        let account = Account(address:"AK3wUpsmyFrWvgytFRoaHatEKj3uxUBZE6")
+        refreshButton.layer.cornerRadius = 8
         addressLabel.text = account.address
         balanceLabel.text = "unkown"
-        account.fetchBalance().then { [weak self] balance in
-            self?.balanceLabel.text = "\(balance.confirmed.toStandard()) Ark"
+
+        refresh()
+        account.fetchDelegates().then { delegates in
+            print(delegates)
+        }
+        
+        
+        Block.fetchSupply().then { supply in
+            print(supply)
+        }
+        
+        Block.fetchMilestone().then { milestone in
+            print(milestone)
+        }
+        
+        Block.fetchReward().then { reward in
+            print(reward)
+        }
+        
+        Block.fetchFee().then { fee in
+            print(fee)
+        }
+        
+        Block.fetchNethash().then { nethash in
+            print(nethash)
+        }
+    }
+    
+    @IBAction func refreshTapped() {
+        refresh()
+    }
+    
+    func refresh() {
+        account.fetchInfo().then { a in
+            self.balanceLabel.text = "\(a.balance!.confirmed.toStandard())"
+            self.publicKeyLabel.text = a.publicKey
         }
     }
 }
 
-extension Int {
-    func toStandard() -> Int {
-        return self / 100000000
+extension Float {
+    func toStandard() -> Float {
+        return self / Float(100000000)
     }
 }

@@ -11,17 +11,17 @@ import Foundation
 public struct Balance {
     
     /// Balance of account.
-    public var confirmed: Int
+    public var confirmed: Float
     
     /// Unconfirmed balance of account.
-    public var unconfirmed: Int
+    public var unconfirmed: Float
     
     public init() {
         confirmed = 0
         unconfirmed = 0
     }
     
-    public init(confirmed: Int, unconfirmed: Int) {
+    public init(confirmed: Float, unconfirmed: Float) {
         self.confirmed = confirmed
         self.unconfirmed = unconfirmed
     }
