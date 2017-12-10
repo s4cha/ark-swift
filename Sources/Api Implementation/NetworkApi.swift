@@ -62,4 +62,8 @@ struct NetworkApi: Api {
     func fetchFee() -> Promise<Int> {
         return network.get("/blocks/getFee", keypath: "fee")
     }
+    
+    func fetchNethash() -> Promise<String> {
+        return network.get("/blocks/getNethash", keypath: "nethash")
+    }
 }

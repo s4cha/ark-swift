@@ -118,6 +118,15 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
+    func testCanRetrieveNethash() {
+        let exp = expectation(description: "Can retrieve nethash")
+        Block.fetchNethash().then { nethash in
+            XCTAssertEqual(nethash, "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988")
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
     func testCanfetchTopAccounts() {
         let exp = expectation(description: "Can fecth top Accounts")
         Account.fetchTopAccounts().then { topAccounts in

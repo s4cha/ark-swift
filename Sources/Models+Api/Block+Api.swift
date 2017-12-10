@@ -30,4 +30,9 @@ public extension Block {
     static func fetchFee() -> Promise<Int> {
         return api.fetchFee()
     }
+    
+    /// Get the blockchain nethash.
+    static func fetchNethash() -> Promise<String> {
+        return api.fetchNethash()
+    }
 }
