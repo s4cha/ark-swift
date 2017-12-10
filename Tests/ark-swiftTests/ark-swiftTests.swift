@@ -206,5 +206,15 @@ class ArkswiftTests: XCTestCase {
         }
         wait(for: [exp], timeout: 0.1)
     }
+    
+    func testCanRetrieveDelegatesCountForAccount() {
+        let exp = expectation(description: "Can retrieve signature fee for address")
+        let account = Account(address: "AK3wUpsmyFrWvweRoHaEjuxUBE6")
+        account.fetchDelegatesCount().then { delegatesCount in
+            XCTAssertEqual(delegatesCount, 608)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
 }
 

@@ -31,4 +31,7 @@ protocol Api {
     // Signature
     func fetchSignatureFee() -> Promise<Int>
     func fetchSignatureFee(for address: String) -> Promise<Int>
+    
+    // Delegates
+    func fetchDelegatesCount(for address: String) -> Promise<Int>
 }

@@ -41,4 +41,9 @@ public extension Account {
     func fetchDelegates() -> Promise<[Delegate]> {
         return api.fetchAccountDelegates(for: self)
     }
+    
+    /// Get the count of delegates.
+    func fetchDelegatesCount() -> Promise<Int> {
+        return api.fetchDelegatesCount(for: address)
+    }
 }

@@ -73,6 +73,17 @@ account.fetchDelegateFee().then { fee in
 //output: 2500000000
 ```
 
+#### Delegates count
+Get the count of delegates.
+
+```swift
+account.fetchDelegatesCount().then { delegatesCount in
+    print(delegatesCount)
+}
+
+//output: 608
+```
+
 #### Delegates
 Get the delegates of an account.
 
