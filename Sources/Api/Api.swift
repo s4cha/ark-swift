@@ -25,4 +25,6 @@ protocol Api {
     func fetchMilestone() -> Promise<Int>
     func fetchFee() -> Promise<Int>
     func fetchNethash() -> Promise<String>
+    func fetchBlocks() -> Promise<[Block]>
+    func fetchBlock(with id: String) -> Promise<Block>
 }

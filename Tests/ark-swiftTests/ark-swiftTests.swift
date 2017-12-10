@@ -137,5 +137,57 @@ class ArkswiftTests: XCTestCase {
         }
         wait(for: [exp], timeout: 0.1)
     }
+    
+    func testCanFetchBlocks() {
+        let exp = expectation(description: "Can fetch blocks")
+        Block.fetchBlocks().then { blocks in
+            XCTAssertEqual(blocks.count, 2)
+            let b = blocks[1]
+            XCTAssertEqual(b.id, "7432845560996079685")
+            XCTAssertEqual(b.version, 0)
+            XCTAssertEqual(b.timestamp, 22825600)
+            XCTAssertEqual(b.height, 2816164)
+            XCTAssertEqual(b.previousBlock, "11152274710022062224")
+            XCTAssertEqual(b.numberOfTransactions, 0)
+            XCTAssertEqual(b.totalAmount, 0)
+            XCTAssertEqual(b.totalFee, 0)
+            XCTAssertEqual(b.reward, 200000000)
+            XCTAssertEqual(b.payloadLength, 0)
+            XCTAssertEqual(b.payloadHash, "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855")
+            XCTAssertEqual(b.generatorPublicKey, "0217ff1ec656f2354a899bde097bb3131a9730fe491bb87dedb96489120be9154f")
+            XCTAssertEqual(b.generatorId, "AXzEMF7TC1aH3ax1Luxk6XdyKXDRxnBj4f")
+            XCTAssertEqual(b.blockSignature, "3044022023505abfacb6538a0fd8db639dfb3078a34d601c3625533c92a629cb4dd7131c0220658d94e2834668430ee0be70f201820be7fe87574acf3d525f67c662acc7eb03")
+            XCTAssertEqual(b.confirmations, 1)
+            XCTAssertEqual(b.totalForged, "200000000")
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
+    func testCanFetchBlockWithId() {
+        let exp = expectation(description: "Can fetch block with id")
+        let block = Block(id: "7432845560996079685")
+        block.fetch().then { b in
+            print(b)
+            XCTAssertEqual(b.id, "7432845560996079685")
+            XCTAssertEqual(b.version, 0)
+            XCTAssertEqual(b.timestamp, 22825600)
+            XCTAssertEqual(b.height, 2816164)
+            XCTAssertEqual(b.previousBlock, "11152274710022062224")
+            XCTAssertEqual(b.numberOfTransactions, 0)
+            XCTAssertEqual(b.totalAmount, 0)
+            XCTAssertEqual(b.totalFee, 0)
+            XCTAssertEqual(b.reward, 200000000)
+            XCTAssertEqual(b.payloadLength, 0)
+            XCTAssertEqual(b.payloadHash, "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855")
+            XCTAssertEqual(b.generatorPublicKey, "0217ff1ec656f2354a899bde097bb3131a9730fe491bb87dedb96489120be9154f")
+            XCTAssertEqual(b.generatorId, "AXzEMF7TC1aH3ax1Luxk6XdyKXDRxnBj4f")
+            XCTAssertEqual(b.blockSignature, "3044022023505abfacb6538a0fd8db639dfb3078a34d601c3625533c92a629cb4dd7131c0220658d94e2834668430ee0be70f201820be7fe87574acf3d525f67c662acc7eb03")
+            XCTAssertEqual(b.confirmations, 1)
+            XCTAssertEqual(b.totalForged, "200000000")
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
 }
 

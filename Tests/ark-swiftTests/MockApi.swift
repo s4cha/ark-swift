@@ -67,4 +67,34 @@ class MockApi: Api {
     func fetchNethash() -> Promise<String> {
         return Promise("6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988")
     }
+    
+    func fetchBlocks() -> Promise<[Block]> {
+        return Promise([fakeBlock(), fakeBlock()])
+    }
+    
+    func fetchBlock(with id: String) -> Promise<Block> {
+        return Promise(fakeBlock())
+    }
+    
+    func fakeBlock() -> Block {
+        var fakeBlock = Block()
+        fakeBlock.id = "7432845560996079685"
+        fakeBlock.version = 0
+        fakeBlock.timestamp = 22825600
+        fakeBlock.height = 2816164
+        fakeBlock.previousBlock = "11152274710022062224"
+        fakeBlock.numberOfTransactions = 0
+        fakeBlock.totalAmount = 0
+        fakeBlock.totalFee = 0
+        fakeBlock.reward = 200000000
+        fakeBlock.payloadLength = 0
+        fakeBlock.payloadHash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        fakeBlock.generatorPublicKey = "0217ff1ec656f2354a899bde097bb3131a9730fe491bb87dedb96489120be9154f"
+        fakeBlock.generatorId = "AXzEMF7TC1aH3ax1Luxk6XdyKXDRxnBj4f"
+        fakeBlock.blockSignature = "3044022023505abfacb6538a0fd8db639dfb3078a34d601c3625533c92a629cb4dd7131c0220658d94e2834668430ee0be70f201820be7fe87574acf3d525f67c662acc7eb03"
+        fakeBlock.confirmations = 1
+        fakeBlock.totalForged = "200000000"
+        return fakeBlock
+    }
+    
 }

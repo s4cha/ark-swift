@@ -35,4 +35,14 @@ public extension Block {
     static func fetchNethash() -> Promise<String> {
         return api.fetchNethash()
     }
+    
+    /// Get all blocks.
+    static func fetchBlocks() -> Promise<[Block]> {
+        return api.fetchBlocks()
+    }
+    
+    /// Fetch block information
+    func fetch() -> Promise<Block> {
+        return api.fetchBlock(with: id)
+    }
 }

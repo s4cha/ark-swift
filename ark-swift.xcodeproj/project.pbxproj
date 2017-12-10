@@ -55,6 +55,10 @@
 		99594D411FDBF60C00A8A7A1 /* Block+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D3E1FDBF60C00A8A7A1 /* Block+Api.swift */; };
 		99594D421FDBF60C00A8A7A1 /* Block+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D3E1FDBF60C00A8A7A1 /* Block+Api.swift */; };
 		99594D451FDD2FAF00A8A7A1 /* MockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D441FDD2FAF00A8A7A1 /* MockApi.swift */; };
+		99594D471FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D461FDDA5BE00A8A7A1 /* Block+JSON.swift */; };
+		99594D481FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D461FDDA5BE00A8A7A1 /* Block+JSON.swift */; };
+		99594D491FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D461FDDA5BE00A8A7A1 /* Block+JSON.swift */; };
+		99594D4A1FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99594D461FDDA5BE00A8A7A1 /* Block+JSON.swift */; };
 		996237131FDBBEB0007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
 		996237141FDBBEB7007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
 		996237151FDBBEB7007ED2D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996237121FDBBEB0007ED2D5 /* Api.swift */; };
@@ -116,6 +120,7 @@
 		99594D381FDBF53E00A8A7A1 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		99594D3E1FDBF60C00A8A7A1 /* Block+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Block+Api.swift"; sourceTree = "<group>"; };
 		99594D441FDD2FAF00A8A7A1 /* MockApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApi.swift; sourceTree = "<group>"; };
+		99594D461FDDA5BE00A8A7A1 /* Block+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Block+JSON.swift"; sourceTree = "<group>"; };
 		996237121FDBBEB0007ED2D5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		996237171FDBBEE4007ED2D5 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		9962371E1FDBBF30007ED2D5 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
@@ -273,6 +278,7 @@
 				9954631A1FDBC0EF0081BF99 /* Account+JSON.swift */,
 				995463301FDBCC0C0081BF99 /* Balance+JSON.swift */,
 				9954633C1FDBE6440081BF99 /* Delegate+JSON.swift */,
+				99594D461FDDA5BE00A8A7A1 /* Block+JSON.swift */,
 			);
 			path = "JSON Mapping";
 			sourceTree = "<group>";
@@ -628,6 +634,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99594D471FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */,
 				995463311FDBCC0C0081BF99 /* Balance+JSON.swift in Sources */,
 				99594D391FDBF53E00A8A7A1 /* Block.swift in Sources */,
 				99594D3F1FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
@@ -656,6 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99594D491FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */,
 				995463331FDBCC3F0081BF99 /* Balance+JSON.swift in Sources */,
 				99594D3B1FDBF54400A8A7A1 /* Block.swift in Sources */,
 				99594D411FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
@@ -675,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99594D4A1FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */,
 				995463341FDBCC400081BF99 /* Balance+JSON.swift in Sources */,
 				99594D3C1FDBF54400A8A7A1 /* Block.swift in Sources */,
 				99594D421FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
@@ -694,6 +703,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99594D481FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */,
 				995463321FDBCC3F0081BF99 /* Balance+JSON.swift in Sources */,
 				99594D3A1FDBF54300A8A7A1 /* Block.swift in Sources */,
 				99594D401FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
