@@ -100,6 +100,15 @@ class ArkswiftTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
+    func testCanRetrieveMilestone() {
+        let exp = expectation(description: "Can retrieve milestone")
+        Block.fetchMilestone().then { milestone in
+            XCTAssertEqual(milestone, 12)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
+    
     func testCanfetchTopAccounts() {
         let exp = expectation(description: "Can fecth top Accounts")
         Account.fetchTopAccounts().then { topAccounts in

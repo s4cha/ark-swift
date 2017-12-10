@@ -54,4 +54,8 @@ class MockApi: Api {
     func fetchReward() -> Promise<Int> {
         return Promise(589)
     }
+    
+    func fetchMilestone() -> Promise<Int> {
+        return Promise(12)
+    }
 }

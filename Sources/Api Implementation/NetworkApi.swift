@@ -54,4 +54,8 @@ struct NetworkApi: Api {
     func fetchReward() -> Promise<Int> {
         return network.get("/blocks/getReward", keypath: "reward")
     }
+    
+    func fetchMilestone() -> Promise<Int> {
+        return network.get("/blocks/getMilestone", keypath: "milestone")
+    }
 }

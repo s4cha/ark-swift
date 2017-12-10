@@ -20,4 +20,9 @@ extension Block {
     static func fetchReward() -> Promise<Int> {
         return api.fetchReward()
     }
+    
+    /// Get the blockchain milestone.
+    static func fetchMilestone() -> Promise<Int> {
+        return api.fetchMilestone()
+    }
 }

@@ -119,3 +119,25 @@ Block.fetchSupply().then { supply in
 
 //output: 13060596600000000
 ```
+
+#### Reward
+Get the blockchain reward.
+
+```swift
+Block.fetchReward().then { reward in
+    print(reward)
+}
+
+//output: 200000000
+```
+
+#### Milestone
+Get the blockchain milestone.
+
+```swift
+Block.fetchMilestone().then { milestone in
+  print(milestone)
+}
+
+//output: 0
+```
