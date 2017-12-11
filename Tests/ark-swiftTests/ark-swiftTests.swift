@@ -216,5 +216,29 @@ class ArkswiftTests: XCTestCase {
         }
         wait(for: [exp], timeout: 0.1)
     }
+    
+    func testCanFetchTransactionsForAccount() {
+        let exp = expectation(description: "Can fetch blocks")
+        let account = Account(address: "AK3wUpsmyFrWvweRoHaEjuxUBE6")
+        account.fetchTransactions().then { transactions in
+            XCTAssertEqual(transactions.count, 2)
+            let t = transactions[1]
+            XCTAssertEqual(t.id, "6d023212b50ed071aab8a3c39729b76d22d3870864c97bf2363a48aac60f2db3")
+            XCTAssertEqual(t.blockId, "7362111732935655288")
+            XCTAssertEqual(t.type, 3)
+            XCTAssertEqual(t.date, Date(timeIntervalSince1970: 22832896))
+            XCTAssertEqual(t.amount, 1234)
+            XCTAssertEqual(t.fee, 100000000)
+            XCTAssertEqual(t.senderId, "AK3wUpsmyFrWvgytFRoaHatEKj3uxUBZE6")
+            XCTAssertEqual(t.recipientId, "AK3wUpsmyFrWvgytFRoaHatEKj3uxUBZE6")
+            XCTAssertEqual(t.senderPublicKey, "02d17fcedfd9eb392982f7795c68f4a6e3a131e1feefa242d9aea83c13629730e1")
+            XCTAssertEqual(t.signature, "3045022100fb1fa8baa76bfa0fbb7673615f37ff3837919ac9881d77ebb875dc845ed6874e022001b85375f77516afafe508ca8d4c4a3cfa146e658ed9386e78dbf7fdab6b1981")
+            XCTAssertEqual(t.votes?.count, 2)
+            XCTAssertEqual(t.votes?[0], "+031641ff081b93279b669f7771b3fbe48ade13eadb6d5fd85bdd025655e349f008")
+            XCTAssertEqual(t.confirmations, 5604)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
+    }
 }
 

@@ -108,4 +108,25 @@ class MockApi: Api {
     func fetchDelegatesCount(for address: String) -> Promise<Int> {
         return Promise(608)
     }
+    
+    func fetchTransactions(for address: String) -> Promise<[Transaction]> {
+        return Promise([fakeTransaction(), fakeTransaction()])
+    }
+    
+    func fakeTransaction() -> Transaction {
+        var t = Transaction()
+        t.id = "6d023212b50ed071aab8a3c39729b76d22d3870864c97bf2363a48aac60f2db3"
+        t.blockId = "7362111732935655288"
+        t.type = 3
+        t.date = Date(timeIntervalSince1970: 22832896)
+        t.amount = 1234
+        t.fee = 100000000
+        t.senderId = "AK3wUpsmyFrWvgytFRoaHatEKj3uxUBZE6"
+        t.recipientId = "AK3wUpsmyFrWvgytFRoaHatEKj3uxUBZE6"
+        t.senderPublicKey = "02d17fcedfd9eb392982f7795c68f4a6e3a131e1feefa242d9aea83c13629730e1"
+        t.signature = "3045022100fb1fa8baa76bfa0fbb7673615f37ff3837919ac9881d77ebb875dc845ed6874e022001b85375f77516afafe508ca8d4c4a3cfa146e658ed9386e78dbf7fdab6b1981"
+        t.votes = ["+031641ff081b93279b669f7771b3fbe48ade13eadb6d5fd85bdd025655e349f008","+031641ff081b93279b669f7771b3fbe48ade13eadb6d5fd85bdd025655e349f008"]
+        t.confirmations = 5604
+        return t
+    }
 }
