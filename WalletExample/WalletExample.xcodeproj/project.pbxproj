@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9907CA641FDE8B4D00573932 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9907CA631FDE8B4D00573932 /* TransactionCell.swift */; };
 		9940DF201FDDB3F700D98300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940DF1F1FDDB3F700D98300 /* AppDelegate.swift */; };
 		9940DF221FDDB3F700D98300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940DF211FDDB3F700D98300 /* ViewController.swift */; };
 		9940DF251FDDB3F700D98300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9940DF231FDDB3F700D98300 /* Main.storyboard */; };
 		9940DF271FDDB3F700D98300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9940DF261FDDB3F700D98300 /* Assets.xcassets */; };
 		9940DF2A1FDDB3F700D98300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9940DF281FDDB3F700D98300 /* LaunchScreen.storyboard */; };
+		9973D0961FDE7EC2001B713C /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D0951FDE7EC2001B713C /* TransactionsViewController.swift */; };
 		9995FC3B1FDDB79D0077CE0F /* Ark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940DF3C1FDDB42700D98300 /* Ark.framework */; };
 		9995FC3C1FDDB79D0077CE0F /* Ark.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9940DF3C1FDDB42700D98300 /* Ark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9995FC4B1FDDBA040077CE0F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9995FC4A1FDDBA040077CE0F /* Alamofire.framework */; };
@@ -94,6 +96,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9907CA631FDE8B4D00573932 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		9940DF1C1FDDB3F700D98300 /* WalletExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9940DF1F1FDDB3F700D98300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9940DF211FDDB3F700D98300 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		9940DF291FDDB3F700D98300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9940DF2B1FDDB3F700D98300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9940DF311FDDB42700D98300 /* ark-swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ark-swift.xcodeproj"; path = "../ark-swift.xcodeproj"; sourceTree = "<group>"; };
+		9973D0951FDE7EC2001B713C /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		9995FC361FDDB6BC0077CE0F /* then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = then.framework; path = ../Carthage/Build/iOS/then.framework; sourceTree = "<group>"; };
 		9995FC431FDDB9AF0077CE0F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		9995FC451FDDB9B10077CE0F /* Arrow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arrow.framework; path = ../Carthage/Build/iOS/Arrow.framework; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			children = (
 				9940DF1F1FDDB3F700D98300 /* AppDelegate.swift */,
 				9940DF211FDDB3F700D98300 /* ViewController.swift */,
+				9973D0951FDE7EC2001B713C /* TransactionsViewController.swift */,
+				9907CA631FDE8B4D00573932 /* TransactionCell.swift */,
 				9940DF231FDDB3F700D98300 /* Main.storyboard */,
 				9940DF261FDDB3F700D98300 /* Assets.xcassets */,
 				9940DF281FDDB3F700D98300 /* LaunchScreen.storyboard */,
@@ -343,6 +349,8 @@
 			files = (
 				9940DF221FDDB3F700D98300 /* ViewController.swift in Sources */,
 				9940DF201FDDB3F700D98300 /* AppDelegate.swift in Sources */,
+				9907CA641FDE8B4D00573932 /* TransactionCell.swift in Sources */,
+				9973D0961FDE7EC2001B713C /* TransactionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

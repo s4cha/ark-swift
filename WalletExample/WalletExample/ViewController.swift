@@ -30,26 +30,31 @@ class ViewController: UIViewController {
             print(delegates)
         }
         
+//        Block.fetchSupply().then { supply in
+//            print(supply)
+//        }
+//
+//        Block.fetchMilestone().then { milestone in
+//            print(milestone)
+//        }
+//
+//        Block.fetchReward().then { reward in
+//            print(reward)
+//        }
+//
+//        Block.fetchFee().then { fee in
+//            print(fee)
+//        }
+//
+//        Block.fetchNethash().then { nethash in
+//            print(nethash)
+//        }
         
-        Block.fetchSupply().then { supply in
-            print(supply)
+        
+        account.fetchTransactions().then { transactions in
+            print(transactions)
         }
         
-        Block.fetchMilestone().then { milestone in
-            print(milestone)
-        }
-        
-        Block.fetchReward().then { reward in
-            print(reward)
-        }
-        
-        Block.fetchFee().then { fee in
-            print(fee)
-        }
-        
-        Block.fetchNethash().then { nethash in
-            print(nethash)
-        }
     }
     
     @IBAction func refreshTapped() {

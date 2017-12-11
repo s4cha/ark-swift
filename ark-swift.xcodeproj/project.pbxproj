@@ -79,6 +79,14 @@
 		996237201FDBBF39007ED2D5 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9962371E1FDBBF30007ED2D5 /* NetworkApi.swift */; };
 		996237211FDBBF39007ED2D5 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9962371E1FDBBF30007ED2D5 /* NetworkApi.swift */; };
 		996237221FDBBF3A007ED2D5 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9962371E1FDBBF30007ED2D5 /* NetworkApi.swift */; };
+		9973D08C1FDE7B7E001B713C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D08B1FDE7B7E001B713C /* Transaction.swift */; };
+		9973D08D1FDE7B7E001B713C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D08B1FDE7B7E001B713C /* Transaction.swift */; };
+		9973D08E1FDE7B7E001B713C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D08B1FDE7B7E001B713C /* Transaction.swift */; };
+		9973D08F1FDE7B7E001B713C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D08B1FDE7B7E001B713C /* Transaction.swift */; };
+		9973D0911FDE7C3F001B713C /* Transaction+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D0901FDE7C3F001B713C /* Transaction+JSON.swift */; };
+		9973D0921FDE7C3F001B713C /* Transaction+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D0901FDE7C3F001B713C /* Transaction+JSON.swift */; };
+		9973D0931FDE7C3F001B713C /* Transaction+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D0901FDE7C3F001B713C /* Transaction+JSON.swift */; };
+		9973D0941FDE7C3F001B713C /* Transaction+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973D0901FDE7C3F001B713C /* Transaction+JSON.swift */; };
 		DD7502881C68FEDE006590AF /* Ark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* Ark.framework */; };
 		DD7502921C690C7A006590AF /* Ark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* Ark.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +142,8 @@
 		996237121FDBBEB0007ED2D5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		996237171FDBBEE4007ED2D5 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		9962371E1FDBBF30007ED2D5 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
+		9973D08B1FDE7B7E001B713C /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		9973D0901FDE7C3F001B713C /* Transaction+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+JSON.swift"; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* ark-swift.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ark-swift.plist"; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* ark-swiftTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ark-swiftTests.plist"; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* ark-swift-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ark-swift-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +255,7 @@
 				9954632A1FDBCB6B0081BF99 /* Balance.swift */,
 				995463361FDBE5EF0081BF99 /* Delegate.swift */,
 				99594D381FDBF53E00A8A7A1 /* Block.swift */,
+				9973D08B1FDE7B7E001B713C /* Transaction.swift */,
 				99594D4B1FDDAC7000A8A7A1 /* Signature.swift */,
 				995463131FDBC0B30081BF99 /* Models+Api */,
 				9962371D1FDBBF0C007ED2D5 /* Api Implementation */,
@@ -291,6 +302,7 @@
 				995463301FDBCC0C0081BF99 /* Balance+JSON.swift */,
 				9954633C1FDBE6440081BF99 /* Delegate+JSON.swift */,
 				99594D461FDDA5BE00A8A7A1 /* Block+JSON.swift */,
+				9973D0901FDE7C3F001B713C /* Transaction+JSON.swift */,
 			);
 			path = "JSON Mapping";
 			sourceTree = "<group>";
@@ -648,6 +660,7 @@
 			files = (
 				99594D471FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */,
 				995463311FDBCC0C0081BF99 /* Balance+JSON.swift in Sources */,
+				9973D08C1FDE7B7E001B713C /* Transaction.swift in Sources */,
 				99594D4C1FDDAC7000A8A7A1 /* Signature.swift in Sources */,
 				99594D391FDBF53E00A8A7A1 /* Block.swift in Sources */,
 				99594D3F1FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
@@ -657,6 +670,7 @@
 				995463371FDBE5EF0081BF99 /* Delegate.swift in Sources */,
 				996237181FDBBEE4007ED2D5 /* Account.swift in Sources */,
 				9962371F1FDBBF30007ED2D5 /* NetworkApi.swift in Sources */,
+				9973D0911FDE7C3F001B713C /* Transaction+JSON.swift in Sources */,
 				995463151FDBC0C70081BF99 /* Account+Api.swift in Sources */,
 				9954632B1FDBCB6B0081BF99 /* Balance.swift in Sources */,
 				9954633D1FDBE6440081BF99 /* Delegate+JSON.swift in Sources */,
@@ -679,6 +693,7 @@
 			files = (
 				99594D491FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */,
 				995463331FDBCC3F0081BF99 /* Balance+JSON.swift in Sources */,
+				9973D08E1FDE7B7E001B713C /* Transaction.swift in Sources */,
 				99594D4E1FDDAC7000A8A7A1 /* Signature.swift in Sources */,
 				99594D3B1FDBF54400A8A7A1 /* Block.swift in Sources */,
 				99594D411FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
@@ -688,6 +703,7 @@
 				995463391FDBE5EF0081BF99 /* Delegate.swift in Sources */,
 				9962371A1FDBBEE8007ED2D5 /* Account.swift in Sources */,
 				996237211FDBBF39007ED2D5 /* NetworkApi.swift in Sources */,
+				9973D0931FDE7C3F001B713C /* Transaction+JSON.swift in Sources */,
 				995463171FDBC0CA0081BF99 /* Account+Api.swift in Sources */,
 				9954632D1FDBCBCF0081BF99 /* Balance.swift in Sources */,
 				9954633F1FDBE6440081BF99 /* Delegate+JSON.swift in Sources */,
@@ -701,6 +717,7 @@
 			files = (
 				99594D4A1FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */,
 				995463341FDBCC400081BF99 /* Balance+JSON.swift in Sources */,
+				9973D08F1FDE7B7E001B713C /* Transaction.swift in Sources */,
 				99594D4F1FDDAC7000A8A7A1 /* Signature.swift in Sources */,
 				99594D3C1FDBF54400A8A7A1 /* Block.swift in Sources */,
 				99594D421FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
@@ -710,6 +727,7 @@
 				9954633A1FDBE5EF0081BF99 /* Delegate.swift in Sources */,
 				9962371B1FDBBEE9007ED2D5 /* Account.swift in Sources */,
 				996237221FDBBF3A007ED2D5 /* NetworkApi.swift in Sources */,
+				9973D0941FDE7C3F001B713C /* Transaction+JSON.swift in Sources */,
 				995463181FDBC0CA0081BF99 /* Account+Api.swift in Sources */,
 				9954632E1FDBCBCF0081BF99 /* Balance.swift in Sources */,
 				995463401FDBE6440081BF99 /* Delegate+JSON.swift in Sources */,
@@ -723,6 +741,7 @@
 			files = (
 				99594D481FDDA5BE00A8A7A1 /* Block+JSON.swift in Sources */,
 				995463321FDBCC3F0081BF99 /* Balance+JSON.swift in Sources */,
+				9973D08D1FDE7B7E001B713C /* Transaction.swift in Sources */,
 				99594D4D1FDDAC7000A8A7A1 /* Signature.swift in Sources */,
 				99594D3A1FDBF54300A8A7A1 /* Block.swift in Sources */,
 				99594D401FDBF60C00A8A7A1 /* Block+Api.swift in Sources */,
@@ -732,6 +751,7 @@
 				995463381FDBE5EF0081BF99 /* Delegate.swift in Sources */,
 				996237191FDBBEE8007ED2D5 /* Account.swift in Sources */,
 				996237201FDBBF39007ED2D5 /* NetworkApi.swift in Sources */,
+				9973D0921FDE7C3F001B713C /* Transaction+JSON.swift in Sources */,
 				995463161FDBC0C90081BF99 /* Account+Api.swift in Sources */,
 				9954632C1FDBCBCE0081BF99 /* Balance.swift in Sources */,
 				9954633E1FDBE6440081BF99 /* Delegate+JSON.swift in Sources */,

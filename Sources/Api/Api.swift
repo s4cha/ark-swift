@@ -34,4 +34,7 @@ protocol Api {
     
     // Delegates
     func fetchDelegatesCount(for address: String) -> Promise<Int>
+    
+    // Transactions
+    func fetchTransactions(for address: String) -> Promise<[Transaction]>
 }
