@@ -17,6 +17,8 @@ account.fetchBalance().then { [weak self] balance in
 ```
 *Displaying an account's balance*
 
+Checkout the example project: https://github.com/s4cha/ark-swift-example
+
 
 
 Import `Ark` framework at the top of your file:
