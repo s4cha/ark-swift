@@ -233,3 +233,33 @@ Signature.fetchFee(for: "AK3wUpsmyFrWvweRoHaEjuxUBE6").then { fee in
 
 //output: 500000000
 ```
+
+
+## More Ѧrk Developer-Language Integrations:  
+
+- **Go**  
+    - [**ark-go**](https://github.com/ArkEcosystem/ark-go): https://github.com/ArkEcosystem/ark-go  
+- **Java**
+    - [**ark-java**](https://github.com/ArkEcosystem/ark-java): https://github.com/ArkEcosystem/ark-java  
+- **JavaScript**
+    - [**ark-js**](https://github.com/ArkEcosystem/ark-js): https://github.com/ArkEcosystem/ark-js  
+- **Laravel**
+    - [**Laravel-Ark**](https://github.com/faustbrian/Laravel-Ark): https://github.com/faustbrian/Laravel-Ark  
+- **.Net**
+    - [**ark-net**](https://github.com/ArkEcosystem/ark-net): https://github.com/ArkEcosystem/ark-net  
+- **PHP**
+    - [**Ark-PHP-Client**](https://github.com/faustbrian/Ark-PHP-Client): https://github.com/faustbrian/Ark-PHP-Client  
+- **Python**
+    - [**Arky**](https://github.com/ArkEcosystem/arky): https://github.com/ArkEcosystem/arky  
+- **Ruby**
+    - [**Ark-Ruby**](https://github.com/faustbrian/Ark-Ruby): https://github.com/faustbrian/Ark-Ruby  
+- **TypeScript**
+    - [**ark-ts**](https://github.com/ArkEcosystem/ark-ts): https://github.com/ArkEcosystem/ark-ts  
+
+- **Swift**
+    - [**ARKKit**](https://github.com/sleepdefic1t/ARKKit): https://github.com/sleepdefic1t/ARKKit
+
+
+
+#### Tip Jar
+``ѦRK [Ѧ]:`` ```AK3wUpsmyFrWvgytFRoaHatEKj3uxUBZE6```
